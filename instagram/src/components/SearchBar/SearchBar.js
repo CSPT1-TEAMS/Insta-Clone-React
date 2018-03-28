@@ -1,11 +1,26 @@
 import React, { Component } from 'react';
 
-class CommentSection extends Component {
+const SearchBar = () => {
+    return (
+        <nav>
+            <div className='Nav_Logo'>
+                <h5>Instagram</h5>
+            </div>
 
-    render() {
-        return <div>HELLO</div>;
-    }
+            <div className='Nav_Form'>
+                <form>
+                    <input placeholder='Search' />
+                </form>
+            </div>
+
+            <div className='Nav_Buttons'>
+                <a><p>Explore</p></a>
+                <a><p>Favorites</p></a>
+                <a><p>Profile</p></a>
+            </div>
+        </nav>
+    )
 
 }
 
-export default CommentSection;
+export default SearchBar;
