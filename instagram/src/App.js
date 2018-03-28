@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import { PostContainer } from './components/PostContainer';
+import Post from './components/PostContainer/Post';
 
 class App extends Component {
   constructor() {
@@ -21,7 +21,7 @@ class App extends Component {
       <div className="App">
         {
           this.state.data.map(post => {
-            <PostContainer post={ post } />
+            <Post post={ post } />
           })
         }
       </div>
