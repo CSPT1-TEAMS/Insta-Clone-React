@@ -1,0 +1,15 @@
+.parentDiv {
+    display: flex;
+    justify-content: space-around
+}
+
+.searchField {
+    
+}
+
+.instaLogo {
+    width: 175px;
+    height: 50px;
+
+    
+}
