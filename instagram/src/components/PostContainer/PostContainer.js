@@ -1,29 +1,25 @@
 import React, { Component } from 'react';
-// import CommentSection from './'
+import CommentSection from '../CommentSection/CommentSection'
 
 class PostContainer extends Component {
     constructor(props) {
         super(props);
     }
     render() {
-        const post = this.props.post;
         console.log(this.props.post);
         return (
             <div>
-                <div></div>
-
-                <div>
-                    <img src={post.thumbnailUrl} alt='thumbnailUrl' />
-                    <div className='username'>{post.username}</div>
+                <div className='Post_User'>
+                    <img src={this.props.post.thumbnailUrl} alt='thumbnailUrl' />
+                    <div className='username'>{this.props.post.username}</div>
                 </div>
 
-                <div>
-                    <img src={post.imageUrl} alt='imageUrl' />
-                </div>
+                <img className='Post_Image' src={this.props.post.imageUrl} alt='imageUrl' />
 
+                <div className='Post_Buttons'></div>
+                <div className='Post_Likes'>{this.props.post.likes} Likes</div>
 
-
-
+                <CommentSection comments={this.props.post.comments} timestamp={this.props.post.timestamp}/>
             </div>
         )
     }

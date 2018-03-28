@@ -1,25 +1,39 @@
 import React, { Component } from 'react';
 
-const SearchBar = () => {
-    return (
-        <nav>
-            <div className='Nav_Logo'>
-                <h5>Instagram</h5>
-            </div>
+class SearchBar extends Component {
+    constructor() {
+        super();
+        this.state = {
+            search: ''
+        }
+    }
 
-            <div className='Nav_Form'>
-                <form>
-                    <input placeholder='Search' />
-                </form>
-            </div>
+    handleChange = (e) => {
+        this.setState({search: e.target.value});
+    } 
 
-            <div className='Nav_Buttons'>
-                <a><p>Explore</p></a>
-                <a><p>Favorites</p></a>
-                <a><p>Profile</p></a>
-            </div>
-        </nav>
-    )
+    render() {
+        return (
+            <nav>
+                <div className='Nav_Logo'>
+                    <h5>Instagram</h5>
+                </div>
+    
+                <div className='Nav_Form'>
+                    <form>
+                        <input placeholder='Search' value={this.state.search} onChange={this.handleChange} />
+                    </form>
+                </div>
+    
+                <div className='Nav_Buttons'>
+                    <a><p>Explore</p></a>
+                    <a><p>Favorites</p></a>
+                    <a><p>Profile</p></a>
+                </div>
+            </nav>
+        )
+    }
+
 
 }
 
