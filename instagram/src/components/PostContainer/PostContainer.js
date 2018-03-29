@@ -16,7 +16,10 @@ class PostContainer extends Component {
 
                 <img className='Post_Image' src={this.props.post.imageUrl} alt='imageUrl' />
 
-                <div className='Post_Buttons'></div>
+                <div className='Post_Buttons'>
+                  <i class="far fa-heart"></i>
+                  <i class="far fa-comment"></i>
+                </div>
                 <div className='Post_Likes'>{this.props.post.likes} Likes</div>
 
                 <CommentSection comments={this.props.post.comments} timestamp={this.props.post.timestamp}/>
