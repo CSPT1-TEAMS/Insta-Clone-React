@@ -26,7 +26,7 @@ class CommentSection extends Component {
     return (
       <div>
 	{this.props.comments.map((comment, i) => (
-	  <div key={i}>
+	  <div key={i} className="comment-wrapper">
 	    <div className="comment-username">{comment.username}</div>
 	    <div className="comment-text">{comment.text}</div>
 	  </div>
@@ -34,6 +34,7 @@ class CommentSection extends Component {
 
 	<form onSubmit={this.handleSubmit}>
 	  <input
+            className="comment-input"
             onChange={this.handleChange}
             type="text"
             value={this.state.text}

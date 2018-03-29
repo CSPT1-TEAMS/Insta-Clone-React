@@ -11,7 +11,7 @@ class App extends Component {
     super(props)
     this.state = {
       data: [],
-      filteredData: []
+      filterText: ''
     }
   }
 
@@ -37,21 +37,22 @@ class App extends Component {
     this.setState({ data })
   }
 
-  filterUsers = term => {
-
+  filterPosts = text => {
+    this.setState({ filterText: text })
   }
 
   render() {
     return (
       <div className="App container">
-	<SearchBar filterUsers={this.filterUsers} />
-	{this.state.data.map((post, i) => (
-	  <PostContainer
-	    saveComment={this.saveComment}
-	    incrementLikes={this.incrementLikes}
-	    key={i}
-	    postId={i}
-	    post={post}
+	<SearchBar filterPosts={this.filterPosts} />
+	{this.state.data
+	  .map((post, i) => (
+	    <PostContainer
+	      saveComment={this.saveComment}
+	      incrementLikes={this.incrementLikes}
+	      key={i}
+	      postId={i}
+	      post={post}
 	    />
 	))}
       </div>

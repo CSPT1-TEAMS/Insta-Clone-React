@@ -4,10 +4,6 @@ import moment from 'moment'
 import './PostContainer.css'
 
 class PostContainer extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   handleLikeClick = e => {
     e.preventDefault()
     this.props.incrementLikes(this.props.postId)
