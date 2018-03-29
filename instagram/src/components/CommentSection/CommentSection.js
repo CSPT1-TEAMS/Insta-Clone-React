@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './CommentSection.css'
 
 class CommentSection extends Component {
   constructor(props) {
@@ -12,6 +13,8 @@ class CommentSection extends Component {
       username: 'Victor',
       text: this.state.text
     }, this.props.postId)
+
+    this.setState({ text: '' })
   }
 
   handleChange = event => {
@@ -33,6 +36,7 @@ class CommentSection extends Component {
 	  <input
             onChange={this.handleChange}
             type="text"
+            value={this.state.text}
             placeholder="Add a comment..." />
         </form>
       </div>

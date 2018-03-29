@@ -1,0 +1,24 @@
+.post-wrapper {
+
+}
+
+.post-user {
+  display: flex;
+  align-items: center;
+}
+
+.post-user-thumbnail {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.post-user-username {
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.post-image img {
+  width: 400px;
+  height: 400px;
+}
