@@ -1,21 +1,31 @@
-import React from 'react'
+import React, { Component } from 'react'
 import CommentSection from '../CommentSection/CommentSection'
 
-const PostContainer = ({ post }) => {
-  return (
-    <div>
+class PostContainer extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    return (
       <div>
-        <img src={post.thumbnailUrl} />
-        <div>{post.username}</div>
-      </div>
-      <div>
-        <img src={post.imageUrl} />
-      </div>
-      <div>{post.likes} likes</div>
+	<div>
+	  <img src={this.props.post.thumbnailUrl} />
+	  <div>{this.props.post.username}</div>
+	</div>
+	<div>
+	  <img src={this.props.post.imageUrl} />
+	</div>
+	<div>{this.props.post.likes} likes</div>
       
-      <CommentSection comments={post.comments}/>
-    </div>
-  )
+	<CommentSection
+	  comments={this.props.post.comments}
+	  saveComment={this.props.saveComment}
+	  postId={this.props.postId}
+	  />
+      </div>
+    )
+  }
 }
 
 export default PostContainer
