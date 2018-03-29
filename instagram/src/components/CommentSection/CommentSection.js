@@ -16,11 +16,26 @@ class CommentSection extends Component {
         });
     }
 
-    handleSubmit = () => {
+    handleSubmit = (e) => {
+      e.preventDefault();
+      const comments = this.state.comments;
+      const newComment = {
+        username: 'alexbotello',
+        text: this.state.input,
+      }
+      comments.push(newComment);
+      this.setState({
+        comments: comments,
+        input: '',
+      });
 
     }
 
-    handleChange = () => {
+    handleChange = (e) => {
+      const input = e.target.value;
+      this.setState({
+        input: input,
+      });
         
     }
 
@@ -39,7 +54,11 @@ class CommentSection extends Component {
                 <div>{this.props.timestamp}</div>
                 <div className='Comment_Form'>
                     <form onSubmit={this.handleSubmit}>
-                        <input placeholder='Add a comment...' value={this.state.input} onChange={this.handleChange}/>
+                        <input 
+                          placeholder='Add a comment...' 
+                          value={this.state.input} 
+                          onChange={this.handleChange}
+                        />
                     </form>
                 </div>
             </div>
