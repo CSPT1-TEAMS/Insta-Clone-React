@@ -1,32 +1,42 @@
 import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection'
+import { Card, CardImg, CardText, CardBody, CardLink,
+         CardTitle, CardSubtitle } from 'reactstrap';
+import './PostContainer.css';
 
-class PostContainer extends Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        console.log(this.props.post);
-        return (
-            <div>
-                <div className='Post_User'>
-                    <img src={this.props.post.thumbnailUrl} alt='thumbnailUrl' />
-                    <div className='username'>{this.props.post.username}</div>
-                </div>
 
-                <img className='Post_Image' src={this.props.post.imageUrl} alt='imageUrl' />
-
-                <div className='Post_Buttons'>
-                  <i class="far fa-heart"></i>
-                  <i class="far fa-comment"></i>
-                </div>
-                <div className='Post_Likes'>{this.props.post.likes} Likes</div>
-
-                <CommentSection comments={this.props.post.comments} timestamp={this.props.post.timestamp}/>
+const PostContainer = props => {
+  return (
+    <div>
+        <Card className="mx-auto Post">
+          <CardBody>
+            <CardTitle>
+            <div className='Post_User'>
+              <img className="rounded-circle Post_Avatar" src={props.post.thumbnailUrl} alt='thumbnailUrl' />
+              <div className='username'>{props.post.username}</div>
             </div>
-        )
-    }
-
+            </CardTitle>
+          </CardBody>
+            <img width="100%" className='Post_Image' src={props.post.imageUrl} alt='imageUrl'/>
+          <CardBody>
+            <div className="Post_Body">
+              <CardLink><i class="far fa-heart fa-2x"></i></CardLink>
+              <CardLink><i class="far fa-comment fa-2x"></i></CardLink>
+            </div>
+            <div className="Post_Body">
+              <CardText className="Post_Likes">
+                {props.post.likes} Likes
+              </CardText>
+            </div>
+            <div className="Post_Body">
+            <CardText>
+              <CommentSection comments={props.post.comments} timestamp={props.post.timestamp}/>
+            </CardText>
+            </div>
+          </CardBody>
+       </Card>
+    </div>
+  )
 }
 
 export default PostContainer;
