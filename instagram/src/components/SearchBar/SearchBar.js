@@ -19,7 +19,7 @@ class SearchBar extends Component {
         return (
             <div className='parentDiv'>
                 <img className="instaLogo"src={logo} alt="instagram"/>
-                <input className='searchField' type="text" placeHolder="Search" value={this.state.searchField} onChange={this.handleChange} />
+                <input className='searchField' type="text" placeholder="Search" value={this.state.searchField} onChange={this.handleChange} />
                         <ButtonGroup className="buttonGroup">
                             <ButtonToolbar>
                                 <Button className="button" bsSize="large">
