@@ -1,0 +1,18 @@
+.Nav {
+    margin-left: -200px;
+}
+
+.Nav_Logo {
+    width: 20%;
+    border-left: 1px silver solid;
+    margin-left: 10px;
+}
+
+.Nav_Form {
+    text-align: center;
+    width: 300px;
+}
+
+.Nav_icon {
+  padding-top: 15px;
+}
