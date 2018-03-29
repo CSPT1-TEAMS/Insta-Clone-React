@@ -1,0 +1,25 @@
+.Comments {
+    width: 100%;
+}
+
+.Comments_Text {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    width: 100%;
+}
+
+.Comments_User {
+    font-weight: bold;
+}
+
+.Comments_Form {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.Comments_Input {
+    width: 100%;
+    border: none;
+}
+

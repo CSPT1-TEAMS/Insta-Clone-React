@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import {
-    Collapse,
     Navbar,
-    NavbarToggler,
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem } from 'reactstrap';
+    NavLink } from 'reactstrap';
 import './SearchBar.css';
 
 
@@ -29,9 +23,9 @@ class SearchBar extends Component {
     render() {
       return (
        <div>
-          <Navbar color="faded" light expand="md">
+          <Navbar className="Nav" color="faded" light expand="md">
             <div>
-              <NavbarBrand className="Nav" href="/">
+              <NavbarBrand className="Nav_Brand" href="/">
                 <i className="fab fa-instagram fa-2x Nav_icon"></i>
                 <img className="Nav_Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/640px-Instagram_logo.svg.png" />
               </NavbarBrand>

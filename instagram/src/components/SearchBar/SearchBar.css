@@ -1,7 +1,11 @@
 .Nav {
-    margin-left: -200px;
+    border-bottom: 1px solid silver;
+    background-color: white;
 }
 
+.Nav_Brand {
+    margin-left: -200px;
+}
 .Nav_Logo {
     width: 20%;
     border-left: 1px silver solid;

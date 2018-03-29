@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './CommentSection.css';
 
 class CommentSection extends Component {
     constructor(props) {
@@ -40,21 +41,23 @@ class CommentSection extends Component {
     }
 
     render() {
-        console.log(this.state.comments);
         return (
-          <div>
+          <div className="Comments">
             {this.state.comments.map(comment => {
               return (
-                <div>
-                  {comment.username}
-                  {comment.text}
+                <div className="Comments_Text">
+                  <div className="Comments_User">
+                  {comment.username}&nbsp;&nbsp;
+                  </div>
+                    {comment.text}
                 </div>
               )
             })}
-            <div>{this.props.timestamp}</div>
-            <div className='Comment_Form'>
-              <form onSubmit={this.handleSubmit}>
-                <input 
+            <div className="Comments_Text">{this.props.timestamp}</div>
+            <div className='Comments_Text'>
+              <form className="Comments_Form"onSubmit={this.handleSubmit}>
+                <input
+                  className="Comments_Input"
                   placeholder='Add a comment...' 
                   value={this.state.input} 
                   onChange={this.handleChange}

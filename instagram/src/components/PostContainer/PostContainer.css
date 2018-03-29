@@ -1,9 +1,9 @@
 .Post {
-    width: 700px;
+    max-width: 700px;
     height: 100%;
     margin-top: 70px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.1m;
 }
 
 .Post_User {
@@ -13,7 +13,7 @@
 }
 
 .Post_Avatar {
-    width: 10%;
+    width: 5%;
     margin-right: 2%;
 }
 
@@ -24,9 +24,20 @@
 
 .Post_Likes {
     font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Post_Image {
+    margin-top: -25px;
+    height: 767.5px;
 }
 
 
-.username {
+.Post_Username {
     font-weight: bold;
+    font-size: 0.7em;
+}
+
+.Post_Comments {
+    width: 100%;
 }
