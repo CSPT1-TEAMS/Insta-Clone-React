@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import PostContainer from './components/PostContainer/PostContainer'
 
-import { dummyData as data } from './dummy-data'
+import  dummyData  from './dummy-data'
 
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = { data }
+    this.state = { data : dummyData }
   }
 
   //componentDidMount() {
