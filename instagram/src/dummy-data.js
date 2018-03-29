@@ -1,8 +1,8 @@
 const dummyData = [
     {
         username: "philzcoffee",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/20066915_1526002357431295_3266739979170086912_n.jpg',
+        thumbnailUrl: 'https://instagram.fsea1-1.fna.fbcdn.net/vp/dcde8c7f40c678a560473c1bf77c0bcf/5B54C988/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
+        imageUrl: 'https://instagram.fsea1-1.fna.fbcdn.net/vp/743a0586d525c52424e0bfd319958205/5B6D2267/t51.2885-15/e35/20066915_1526002357431295_3266739979170086912_n.jpg',
         likes: 400,
         timestamp: "July 17th 2017, 12:42:40 pm",
         comments: [
@@ -22,7 +22,7 @@ const dummyData = [
     },
     {
         username: "twitch",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
+        thumbnailUrl: 'https://instagram.fsea1-1.fna.fbcdn.net/vp/81f608ddb76a034e06c0d1669e7e2b48/5B35C840/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
         imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985884_314122025700633_6705675951834923008_n.jpg',
         likes: 4307,
         timestamp: "July 15th 2017, 03:12:09 pm",
@@ -45,13 +45,13 @@ const dummyData = [
             },
             {
                 username: "dennis_futbol",
-                text: "Is"
+                text: "Is*"
             }
         ]
     },
     {
         username: "playhearthstone",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg',
+        thumbnailUrl: 'https://instagram.fsea1-1.fna.fbcdn.net/vp/e19a81d019edad27b75fd69a033c7e00/5B7247A7/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg',
         imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985681_748672068646566_4231149029783764992_n.jpg',
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",

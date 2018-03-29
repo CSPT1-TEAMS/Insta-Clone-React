@@ -19,11 +19,9 @@ class App extends Component {
     console.log(this.state.data);
     return (
       <div className="App">
-        {
-          this.state.data.map(post => {
-            <Post post={ post } />
-          })
-        }
+        {this.state.data.map((post, i) => {
+            return <Post key={i} post={post} />
+          })}
       </div>
     );
   }
