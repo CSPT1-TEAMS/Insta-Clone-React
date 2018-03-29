@@ -2,13 +2,24 @@ import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/SearchBar'
 import './App.css';
 import PostContainer from './components/PostContainer/PostContainer'
+import data from "./dummy-data"
 
 class App extends Component {
-  render() {
+    constructor() {
+      super() 
+      this.state = {
+        data: []
+      }
+    }
+    componentDidMount() {
+      return this.setState({data:data})
+    }
+    
+    render() {
     return (
       <div>
         <SearchBar />
-        <PostContainer />
+        <PostContainer data={this.state.data} />
       </div>
     );
   }
