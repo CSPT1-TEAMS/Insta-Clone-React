@@ -8,10 +8,25 @@ class Comment extends Component {
       comm: [],
       newComm: ''
     }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
     this.setState({ comm: this.props.comments, newComm: '' });
+  }
+
+  handleChange(event) {
+    let newComm = event.target.value;
+    this.setState ({ newComm: newComm });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    let comm = this.state.comm;
+    comm.push({ username: 'bhavik', text: this.state.newComm });
+    this.setState({ comm: comm, newComm: ''});
   }
 
   render() {
@@ -24,6 +39,10 @@ class Comment extends Component {
             </div>
           );
         })}
+        <form onSubmit={ this.handleSubmit }>
+          <input type="text" placeholder="Add a Comment..." onChange={ this.handleChange } 
+                 value={ this.state.newComm } />
+        </form>
       </div>
     );
   }
