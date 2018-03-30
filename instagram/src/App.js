@@ -11,12 +11,12 @@ class App extends Component {
     super(props)
     this.state = {
       data: [],
-      filterText: ''
+      filteredData: []
     }
   }
 
   componentDidMount() {
-    this.setState({ data: dummyData })
+    this.setState({ data: dummyData, filteredData: dummyData })
   }
 
   saveComment = (comment, postId) => {
@@ -25,7 +25,14 @@ class App extends Component {
 	return { ...post, comments: [...post.comments, comment ]}
       } else return post
     })
-    this.setState({ data })
+
+    const filteredData = this.state.filteredData.map((post, i) => {
+      if (i === postId) {
+	return { ...post, comments: [...post.comments, comment ]}
+      } else return post
+    })
+
+    this.setState({ data, filteredData })
   }
 
   incrementLikes = postId => {
@@ -34,18 +41,24 @@ class App extends Component {
 	return { ...post, likes: post.likes + 1 }
       } else return post
     })
-    this.setState({ data })
+    const filteredData = this.state.filteredData.map((post, i) => {
+      if (i === postId) {
+	return { ...post, likes: post.likes + 1 }
+      } else return post
+    })
+    this.setState({ data: data, filteredData: filteredData })
   }
 
   filterPosts = text => {
-    this.setState({ filterText: text })
+    const filtered = this.state.data.filter(post => post.username.includes(text))
+    this.setState({ filteredData: filtered })
   }
 
   render() {
     return (
       <div className="App container">
 	<SearchBar filterPosts={this.filterPosts} />
-	{this.state.data
+	{this.state.filteredData
 	  .map((post, i) => (
 	    <PostContainer
 	      saveComment={this.saveComment}
