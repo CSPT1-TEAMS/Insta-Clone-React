@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-import { Glyphicon, ButtonToolbar, ButtonGroup, Button } from 'react-bootstrap';
+import { Glyphicon,Button} from 'react-bootstrap';
 import './PostContainer.css';
 // import PropTypes from 'prop-types';
 
 import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = (props) => {
-    console.log('PostContainer', props)
-    console.log('Post', props.data[0] ? props.data[0].thumbnailUrl : '')
+    // console.log('PostContainer', props)
+    // console.log('Post', props.data[0] ? props.data[0].thumbnailUrl : '')
     return (
         <div className="post">
             <div className="header">
@@ -18,7 +18,13 @@ const PostContainer = (props) => {
             <img className="image" src={props.data[0] ? props.data[0].imageUrl : ''} alt="image"/>
             </div>
             <div className="comment">
-            <CommentSection props={props} />
+            <div className = "post-btns">
+            <Button className="button" bsSize="large">
+                                  <Glyphicon glyph="heart" /> </Button>
+                                  <Button className="button" bsSize="large">
+                                  <Glyphicon glyph="pencil" /></Button>
+            </div>
+            <CommentSection comments={props.data[0] ? props.data[0].comments : ''} />
             </div>
         </div>
 
