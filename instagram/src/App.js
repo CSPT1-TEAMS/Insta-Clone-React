@@ -28,12 +28,12 @@ class App extends Component {
     return (
       <div className="App">
       <SearchBar getFilter={this.getFilter} />
-      {this.state.filter ? this.state.data.filter((post, i) => {
-        return post.username === this.state.filter
+      {this.state.filter ?
+        this.state.data.filter((post, i) => {
+          return post.username === this.state.filter
         }).map((post, i) => {
-        return <PostContainer post={post} key={i} />
-        }) : 
-        this.state.data.map((post, i) => {
+          return <PostContainer post={post} key={i} />
+        }) : this.state.data.map((post, i) => {
           return <PostContainer post={post} key={i} />
         })}
       </div>
