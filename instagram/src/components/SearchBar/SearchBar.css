@@ -1,3 +1,25 @@
-.searchbar {
+
+
+.row nav .searchbar-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border: 100px solid blue;
+}
+.row nav .logos{
+  width: 100%;
+
+  border: 10px solid blue;
+
+
+
+} 
+.logos {
+  width: 1%;
+}
+
+.row nav .col .searchbar {
+  justify-content: center;
   padding-left: 8px;
+  border: 5px solid violet;
 }

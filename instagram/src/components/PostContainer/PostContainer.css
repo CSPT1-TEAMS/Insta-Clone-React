@@ -1,5 +1,9 @@
 .post-wrapper {
-
+  max-width: 600px;
+  min-width: 400px;
+  border: 1px solid grey;
+  margin-bottom: 10%;
+  padding-bottom: 5%;
 }
 
 .post-user {
@@ -19,6 +23,22 @@
 }
 
 .post-image img {
-  width: 400px;
-  height: 400px;
+  max-width: 100%;
+}
+.heart{
+  padding-right: 8px;
+}
+
+.post-content{
+padding: 0 16px;
+
+}
+.post-likes {
+  display: flex;
+  padding: 5px 0;
+
+
+}
+.post-timestamp{
+  text-align: left;
 }

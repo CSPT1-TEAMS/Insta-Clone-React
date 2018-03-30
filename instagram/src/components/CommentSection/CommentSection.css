@@ -1,6 +1,9 @@
 .comment-wrapper {
   display: flex;
 }
+.comment-section {
+  margin-bottom: 1%;
+}
 
 .comment-username {
   font-weight: 600;
@@ -14,4 +17,5 @@
 .comment-input {
   width: 100%;
   padding-left: 8px;
+  padding: 5px 0 0 8px;
 }

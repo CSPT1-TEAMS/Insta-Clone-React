@@ -25,12 +25,14 @@ class CommentSection extends Component {
   render() {
     return (
       <div>
-	{this.props.comments.map((comment, i) => (
-	  <div key={i} className="comment-wrapper">
-	    <div className="comment-username">{comment.username}</div>
-	    <div className="comment-text">{comment.text}</div>
-	  </div>
-	))}
+        <div className="comment-section">
+          {this.props.comments.map((comment, i) => (
+            <div key={i} className="comment-wrapper">
+              <div className="comment-username">{comment.username}</div>
+              <div className="comment-text">{comment.text}</div>
+            </div>
+          ))}
+        </div>
 
 	<form onSubmit={this.handleSubmit}>
 	  <input
