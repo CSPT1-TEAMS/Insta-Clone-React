@@ -9,7 +9,8 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      data: []
+      data: [],
+      filter: null
     }
   }
   
@@ -17,11 +18,22 @@ class App extends Component {
     this.setState({data: dummyData});
   }
 
+  getFilter = (result) => {
+    this.setState({filter: result});
+  }
+
   render() {
+    console.log(this.state.filter);
+
     return (
       <div className="App">
-      <SearchBar />
-        {this.state.data.map((post, i) => {
+      <SearchBar getFilter={this.getFilter} />
+      {this.state.filter ? this.state.data.filter((post, i) => {
+        return post.username === this.state.filter
+        }).map((post, i) => {
+        return <PostContainer post={post} key={i} />
+        }) : 
+        this.state.data.map((post, i) => {
           return <PostContainer post={post} key={i} />
         })}
       </div>

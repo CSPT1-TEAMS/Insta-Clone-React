@@ -9,8 +9,8 @@ import './SearchBar.css';
 
 
 class SearchBar extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       search: ''
     }
@@ -19,6 +19,12 @@ class SearchBar extends Component {
     handleChange = (e) => {
       this.setState({search: e.target.value});
     } 
+
+    handleSubmit = (e) => {
+      e.preventDefault();
+      this.props.getFilter(this.state.search);
+    }
+
 
     render() {
       return (
@@ -31,7 +37,7 @@ class SearchBar extends Component {
               </NavbarBrand>
             </div>
             <Nav className="mx-auto" navbar>
-              <form>
+              <form onSubmit={this.handleSubmit}>
                 <input className="Nav_Form" placeholder='Search' value={this.state.search} onChange={this.handleChange} />
               </form>
             </Nav>

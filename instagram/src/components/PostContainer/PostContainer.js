@@ -32,7 +32,6 @@ class PostContainer extends Component {
     }
     this.state.liked ? style['color'] = 'red' : style['color'] = ''
 
-
     return (
       <div>
           <Card className="mx-auto Post">
