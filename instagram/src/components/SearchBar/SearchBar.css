@@ -1,15 +1,24 @@
 .parentDiv {
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
+    align-items: center;
 }
 
 .searchField {
-    margin:0;
+    width:175px;
+    height:25px;
 }
 
 .instaLogo {
     width: 175px;
     height: 50px;
 
-    
+}
+
+.buttonGroup {
+    margin: 10px;
+}
+
+.button {
+    margin: 10px;
 }

@@ -1,0 +1,29 @@
+.post {
+margin:auto;
+width:400px;
+}
+
+.header {
+margin: 1rem;
+ width:400px;
+ display:flex;
+ align-items:center;
+}
+
+.thumbNail {
+    width:50px;
+    margin-right: 1rem;
+    border-radius: 100px;
+}
+
+.userName {
+font-size:18px;
+}
+
+.image {
+    max-width:100%;
+}
+
+.comment {
+
+}
