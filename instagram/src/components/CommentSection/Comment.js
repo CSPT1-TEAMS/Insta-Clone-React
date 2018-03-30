@@ -6,7 +6,15 @@ class Comment extends Component {
 
     this.state = {
       comm: [],
-      newComm: ''
+      newComm: '',
+      commStyles1: {
+        fontWeight: 'bold',
+        display: 'inline-block',
+        clear: 'none'
+      },
+      commStyles2: {
+        color: 'grey',
+      }
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -31,11 +39,12 @@ class Comment extends Component {
 
   render() {
     return (
-      <div>
+      <div className="commentContainer">
         {this.state.comm.map((comment, i) => {
           return (
             <div key={i}>
-              {comment.username} {comment.text}
+              <div style={this.state.commStyles1}>{comment.username}</div> 
+              <div style={this.state.commStyles2}>{comment.text}</div>
             </div>
           );
         })}

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './SearchBar.css';
+
 
 class SearchBar extends Component {
     constructor() {
@@ -12,8 +14,8 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/640px-Instagram_logo.svg.png" alt="logo.svg" />
+            <div className="container">
+                <img className="instaImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/640px-Instagram_logo.svg.png" alt="logo.svg" />
                 <form onSubmit={ this.handleSubmit }>
                 <input type="text" placeholder="Search..." onChange={ this.handleChange } 
                         value={ this.state.newComm } />
